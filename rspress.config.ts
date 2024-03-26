@@ -6,6 +6,7 @@ export default defineConfig({
   root: join(__dirname, "docs"),
   title: "Ronbb",
   description: "Tech and more",
+  lang: "zh",
   icon: "/icon.webp",
   logo: "/icon.webp",
   mediumZoom: true,
@@ -57,5 +58,4 @@ export default defineConfig({
       },
     ],
   },
-  lang: "zh",
 });
