@@ -11,6 +11,7 @@
     "rspress": "^1.16.1"
   },
   "devDependencies": {
+    "@aaroon/workbox-rspack-plugin": "^0.2.2",
     "@types/node": "^20.11.30",
     "rehype-mermaid": "^2.1.0"
   }
