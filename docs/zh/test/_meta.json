@@ -1,0 +1,10 @@
+[
+  "index",
+  {
+    "type": "dir",
+    "name": "functional",
+    "label": "功能测试",
+    "collapsible": true,
+    "collapsed": false
+  }
+]

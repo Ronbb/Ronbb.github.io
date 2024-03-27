@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "text": "技术文档",
+    "link": "/tech/",
+    "activeMatch": "^/tech/"
+  },
+  {
+    "text": "日常记录",
+    "link": "/more/",
+    "activeMatch": "^/more/"
+  }
+]

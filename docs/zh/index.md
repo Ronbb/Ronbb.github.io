@@ -6,9 +6,6 @@ hero:
   text: Tech and more
   actions:
     - theme: brand
-      text: Quick Start
-      link: /guide/
-    - theme: alt
       text: Github
       link: https://github.com/Ronbb
   image:
@@ -17,6 +14,8 @@ hero:
 features:
   - title: 技术文档
     icon: 🚀
+    link: /tech
   - title: 日常记录
     icon: 🍨
+    link: /more
 ---

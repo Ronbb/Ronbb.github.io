@@ -1,6 +1,14 @@
 import { join } from "path";
 import { defineConfig } from "rspress/config";
 import rehypeMermaid from "rehype-mermaid";
+import {
+  pluginShiki,
+  createTransformerLineNumber,
+  createTransformerDiff,
+  createTransformerErrorLevel,
+  createTransformerFocus,
+  createTransformerHighlight,
+} from "@rspress/plugin-shiki";
 
 export default defineConfig({
   root: join(__dirname, "docs"),
@@ -10,6 +18,7 @@ export default defineConfig({
   icon: "/icon.webp",
   logo: "/icon.webp",
   mediumZoom: true,
+  globalStyles: join(__dirname, "docs/public/styles.css"),
   markdown: {
     mdxRs: false,
     rehypePlugins: [
@@ -38,6 +47,8 @@ export default defineConfig({
     ],
   },
   themeConfig: {
+    enableScrollToTop: true,
+    enableContentAnimation: true,
     lastUpdated: true,
     socialLinks: [
       { icon: "github", mode: "link", content: "https://github.com/Ronbb" },
@@ -58,4 +69,47 @@ export default defineConfig({
       },
     ],
   },
+  plugins: [
+    pluginShiki({
+      langs: [
+        "bat",
+        "c",
+        "c++",
+        "css",
+        "dart",
+        "docker",
+        "go",
+        "groovy",
+        "html",
+        "javascript",
+        "json",
+        "jsonc",
+        "jsx",
+        "kotlin",
+        "latex",
+        "lua",
+        "make",
+        "markdown",
+        "mdx",
+        "nginx",
+        "powershell",
+        "python",
+        "r",
+        "ruby",
+        "rust",
+        "sql",
+        "swift",
+        "tsx",
+        "typescript",
+        "xml",
+      ],
+      transformers: [
+        createTransformerLineNumber(),
+        createTransformerDiff(),
+        createTransformerErrorLevel(),
+        createTransformerFocus(),
+        createTransformerHighlight(),
+      ],
+    }),
+  ],
 });
